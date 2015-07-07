@@ -1,0 +1,137 @@
+.fs-products-list-item {
+	width: 32%;
+	background: #fff;
+	margin-right: 2%;
+	float: left;
+	margin-bottom: 45px;
+	position: relative;
+
+	&:nth-child(3n+1) {
+		margin-right: 0;
+	}
+
+	a {
+		text-decoration: none;
+		display: block;
+		color: $black-color;
+	}
+
+	&:hover .fs-action-types {
+		display: block;
+	}
+}
+
+.fs-product-photo img{
+	width: 90%
+}
+
+.fs-product-info {
+	border-top: 1px solid #ccc;
+	display: block;
+	position: relative;
+	@extend %clearfix;
+}
+
+.fs-product-price {
+	background: $green-brand-color;
+	padding: 30px 5px;
+	margin-left: 10px;
+	color: #fff;
+	position: absolute;
+	bottom: 0;
+}
+
+.fs-product-title {
+	float: right;
+	width: 70%;
+}
+
+
+.fs-product-splash {
+	background: #000;
+	right: 10px;
+	color: #fff;
+	position: absolute;
+	top: 0px;
+	width: 68px;
+	height: 67px;
+	font-weight: bold;	
+	line-height: 67px;
+	text-align: center;
+	padding: 6px;
+}
+
+.orange {
+	background: #f27e4b;
+	font-size: fontSize(18);
+	line-height: 18px;
+	padding-top: 20px;
+	height: 50px;
+
+}
+
+.fs-products-actions {
+	position: absolute;
+	right: 0;
+}
+
+.fs-action-types {
+	display: none;
+	height: 38px;
+	line-height: 38px;
+	width: 215px;
+	padding: 10px 0;
+	background: #fff;
+	@extend %clearfix;
+}
+
+
+.fs-actions-type {
+	float: left;
+	
+	a {
+		width: 50px;
+		height: 40px;
+		background: #fff url("../images/icons.png") no-repeat;
+		text-indent: -300px;
+		overflow: hidden;
+	}
+	
+}
+
+.fs-action-view a{
+	background-position:  16px -80px;
+
+	&:hover{
+	   opacity: 0.7;
+ 	   transition: opacity 0.15s ease-in-out 0s;
+	}
+}
+
+.fs-action-wishlist a{
+	background-position:  -26px -80px;
+
+	&:hover{
+	   opacity: 0.7;
+ 	   transition: opacity 0.15s ease-in-out 0s;
+	}	
+
+}
+
+.fs-action-share a{
+	background-position:  -67px -80px;
+
+	&:hover{
+	   opacity: 0.7;
+ 	   transition: opacity 0.15s ease-in-out 0s;
+	}	
+}
+
+.fs-action-buy a{
+	background-position:  -110px -80px;
+
+	&:hover{
+	   opacity: 0.7;
+ 	   transition: opacity 0.15s ease-in-out 0s;
+	}	
+}

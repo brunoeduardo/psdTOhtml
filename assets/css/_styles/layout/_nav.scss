@@ -1,0 +1,30 @@
+.fs-nav {
+	float: left;
+	width: 70%;
+	@extend %clearfix;
+}
+
+.fs-nav-categories {
+	float: left;
+	@extend %clearfix;
+}
+
+.fs-nav-category {
+	float:left;
+	
+	&:last-child{
+		border-right: 1px solid #eee;
+	}
+
+	a {
+		color: $black-color;
+		text-decoration: none;
+		padding: 22px;
+		display: block;
+		border-left: 1px solid #eee;
+
+		&:hover {
+			color: $green-brand-color;
+		}
+	}
+}

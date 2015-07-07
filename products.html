@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html ng-app="fooseshoes">
+<head>
+	<title>FOOSHOES - Products</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+	<header class="fs-header">
+		<div class="fs-header-content">
+			<div class="fs-header-wrap">
+				<h1 class="fs-header-logo">
+					<a href="/">
+						<img src="assets/images/fooseshoes-logo.png" alt="Fooseshoes - logo "/>
+					</a>
+				</h1>
+				<div class="fs-header-access">
+					<a href="#">LOGIN</a> or 
+					<a href="#">REGISTER</a>
+				</div>
+				<div class="fs-header-search">				
+					<form action="">
+						<input value=" " type="submit" onclick="abre()"> 
+						<input value="" type="text">
+					</form>
+				</div>
+			</div>
+		</div>			
+		<div class="fs-header-content-nav">
+			<div class="fs-header-wrap">			
+				<nav class="fs-nav">
+					<ul class="fs-nav-categories">
+						<li class="fs-nav-category"><a href="index.html">Home</a></li>
+						<li class="fs-nav-category"><a href="products.html">Products</a></li>
+						<li class="fs-nav-category"><a href="#">About</a></li>
+						<li class="fs-nav-category"><a href="#">Pages</a></li>
+						<li class="fs-nav-category"><a href="#">Blog</a></li>
+						<li class="fs-nav-category"><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="fs-header-right">
+				<a href="#" class="fs-minichart-link">
+					<i class="icon-minichart"></i>
+					<span class="fs-minichart">0</span>					
+				</a>
+				<a href="#" class="fs-wishlist-link">
+					<i class="icon-wishlist"></i>
+					<span class="fs-wishlist">30</span>
+				</a>
+				</div>
+			</div>
+		</div>
+	</header>	
+	<main class="fs-main-content">
+		<div class="fs-small-banner">
+			<a href="">				
+				<img src="assets/images/small-banner.jpg" alt="Small banner">
+			</a>
+		</div>
+		<div class="fs-products-shop-categories">
+			<div class="fs-filters-content">
+				<span class="fs-shop-filter-title">Shop by</span>
+				<span class="fs-shop-filter-select">Brands</span>
+				<span class="fs-shop-filter-select">Categories</span>
+				<span class="fs-shop-filter-select">Price</span>
+
+			</div>
+		</div>
+		<section class="fs-products-list" ng-controller="allProducts as allShoes">
+			<header class="fs-prducts-header">
+				<h2 class="fs-products-list-title">All Products</h2>
+				<span class="fs-breadcrumb">Home > All Products</span>
+				<div class="fs-products-filters">
+					Views as
+					<span class="fs-display-box">box</span>
+					<span class="fs-display-list">list</span>
+					<span class="fs-filter-select">Sort alphabetically</span>
+				</div>
+			</header>	
+			<!-- lista de articles loop -->
+			<article class="fs-products-list-item" ng-repeat="shoes in allShoes.shoesAll">
+					<span class="fs-product-splash" ng-show="shoes.onsale">ON SALE!</span>
+					<span class="fs-product-splash orange" ng-show="shoes.outof">out of stock</span>
+					<figure class="fs-product-photo"><img ng-src="{{shoes.imgUrl}}" alt="Imagem produto"></figure>
+					<span class="fs-product-info">
+						<h3 class="fs-product-title">{{shoes.nameProduct}}</h3>
+						<span class="fs-product-price">$ {{shoes.priceProduct}}</span>
+						<span class="fs-products-actions">
+							<ul class="fs-action-types"><!-- somente no hover -->
+								<li class="fs-actions-type fs-action-view"><a href="{{shoes.linkView}}">view</a></li>
+								<li class="fs-actions-type fs-action-wishlist"><a href="{{shoes.linkWish}}">wishlist</a></li>
+								<li class="fs-actions-type fs-action-share"><a href="{{shoes.linkShare}}">Share</a></li>
+								<li class="fs-actions-type fs-action-buy"><a href="{{shoes.linkBuy}}">Buy</a></li>
+							</ul>
+						</span>
+					</span>
+			</article>
+
+		</section>
+		<!-- make outher section here -->
+
+		<hr></hr>
+		
+		<section class="fs-addons-list">
+			<div class="fs-addons-item">
+				<h2 class="fs-addons-title">Free Shipping</h2>
+				<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, </p>
+			</div>
+			<div class="fs-addons-item">
+				<h2 class="fs-addons-title">Testimonials</h2>
+				<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel nibh. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec erat sem, </p>
+			</div>
+			<div class="fs-addons-item">
+				<h2 class="fs-addons-title">Blog news</h2>
+				<div class="fs-blog-post">
+					<div class="fs-post-date">JUl 04</div>
+					<div class="fs-post-text">
+						<h3 class="fs-post-title"><a href="#">Nice & clean. The best for you blog!</a></h3>
+						<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel </p>
+					</div>
+				</div>
+				<div class="fs-blog-post">
+					<div class="fs-post-date">JUl 04</div>
+					<div class="fs-post-text">
+						<h3 class="fs-post-title"><a href="#">Nice & clean. The best for you blog!</a></h3>
+						<p>Vivamus metus turpis, bibendum vitae euismod vel, vulputate vel </p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer class="fs-footer">
+		<div class="fs-main-footer">
+	<div class="fs-main-footer-content">
+		<ul class="fs-footer-widgets">
+			<li class="fs-widget-item">
+				<h2 class="fs-widget-title">Text Widget</h2>
+				<p>Donec sed odio dui. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p> 
+			</li>
+			<li class="fs-widget-item">
+				<h2 class="fs-widget-title">Twitter Widget</h2>
+				<div class="fs-twitter-post">
+					<p><a href="#">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href="#">@treemelody</a></p>
+					<span class="fs-twitter-post-date">19 days a go</span>
+				</div>
+				<div class="fs-twitter-post">
+					<p><a href="#">@ericafustero</a> Why thank you. Your work looks awesome by the way! <a href="#">@treemelody</a></p>
+					<span class="fs-twitter-post-date">19 days a go</span>
+				</div>						
+			</li>
+			<li class="fs-widget-item">
+				<h2 class="fs-widget-title">FlickrWidget</h2>
+				<ul class="fs-images-list">
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img1.jpg" alt="Picture image"></a></li>
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img2.jpg" alt="Picture image"></a></li>
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img3.jpg" alt="Picture image"></a></li>
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img4.jpg" alt="Picture image"></a></li>
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img5.jpg" alt="Picture image"></a></li>
+					<li class="fs-image-item"><a href="#"><img src="assets/images/img6.jpg" alt="Picture image"></a></li>
+				</ul>
+			</li>										
+		</ul>
+	</div>
+	<div class="fs-footer-contacts">
+		<div class="fs-footer-news">
+			<form action="">
+				<input type="text" placeholder="Enter email for newsletter">
+				<input type="submit" name="" id="" value="enviar">
+			</form>
+		</div>
+		<div class="fs-footer-networks">
+			<ul class="fs-networks-list">
+				<li class="fs-networks-itens icon-facebook"><a href="#">FB</a></li>
+				<li class="fs-networks-itens icon-twitter"><a href="#">Twitter</a></li>
+				<li class="fs-networks-itens icon-gplus"><a href="#">g+</a></li>
+				<li class="fs-networks-itens icon-linkedin"><a href="#">in</a></li>
+				<li class="fs-networks-itens icon-fliker"><a href="#">00</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="fs-secondary-footer">
+	<div class="fs-secondary-footer-content">
+		<div class="fs-copyright">
+			Copyright © Fooseshoes 2013.<br>
+			Designed by EnzoLiVolti.
+		</div>
+		<nav class="fs-footer-nav">
+			<ul class="fs-footer-nav-categories">
+				<li class="fs-footer-nav-category"><a href="#">Home</a></li>
+				<li class="fs-footer-nav-category"><a href="#">Support</a></li>
+				<li class="fs-footer-nav-category"><a href="#">Terms and Conditions</a></li>
+				<li class="fs-footer-nav-category"><a href="#">Faqs</a></li>
+				<li class="fs-footer-nav-category"><a href="#">Contact us</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+	</footer>
+	<!-- scripts -->
+ 	<script type="text/javascript" src="assets/js/libs/angular.min.js"></script>	
+	<script type="text/javascript" src="assets/js/docs/app.js"></script>	
+
+</body>
+</html>

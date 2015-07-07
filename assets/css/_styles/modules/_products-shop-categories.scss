@@ -1,0 +1,51 @@
+.fs-products-shop-categories {
+	background: #2e2e2e;
+	padding: 15px 0;
+}
+
+
+.fs-filters-content {
+	max-width: $larg-max;
+	margin: 0 auto;
+}
+
+.fs-shop-filter-title {
+	color: #fff;
+	font-size: fontSize(22);
+    height: 90px;
+    display: inline-block;
+    line-height: 90px;
+    width: 21%;
+    text-align: center;
+}
+
+
+.fs-shop-filter-select {
+	color: #fff;
+	background: $black-color;
+	font-size: fontSize(18);
+	padding: 22px 10px;
+	width: 22%;
+    display: inline-block;
+    margin-left: 1.8%;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+
+
+	&:after {
+		content: " ";
+		background: url("../images/icons.png") no-repeat -201px -45px;
+		width: 14px;
+		height: 14px;
+		display: inline-block;
+		position: absolute;
+		top: 40%;
+		right: 10%;
+	}
+
+	&:hover {
+		opacity: 0.7;
+    	transition: opacity 0.15s ease-in-out 0s;
+	}
+}

@@ -1,0 +1,228 @@
+//main footer
+
+.fs-footer {
+	background: $black-color;
+	padding-top: 30px;
+}
+
+.fs-main-footer-content {
+	border-bottom: 1px solid #1c1c1c;
+	font-size: fontSize(12);
+	@extend %clearfix;
+}
+
+.fs-widget-item {
+	width: 27%;
+	margin: 3%;
+	float: left;
+
+	p {
+		color: $text-gray;
+		font-style: italic;
+	}
+}
+
+.fs-widget-title {
+	color: $title-gray;
+	font-size: fontSize(14);
+}
+
+.fs-footer-widgets{
+	max-width: $larg-max;
+	margin: 0 auto;
+	@extend %clearfix;
+}
+
+//twitter widget
+.fs-twitter-post {
+	margin-bottom: 15px;
+
+	a {
+		color: $green-brand-color;
+		text-decoration: none;
+	}
+
+	p {
+		margin-bottom: 4px;
+	}
+}
+
+.fs-twitter-post-date {
+	color: $text-gray;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+//list images
+.fs-images-list {
+	@extendo %clearfix;
+}
+
+
+.fs-image-item {
+	float: left;
+	margin: 2%;
+
+	a:hover {
+	   opacity: 0.7;
+ 	   transition: opacity 0.15s ease-in-out 0s;
+	}
+}
+
+
+// footer contacts
+
+.fs-footer-contacts {
+	max-width: $larg-max;
+	margin: 0 auto;
+	padding: 40px 0;
+
+	@extend %clearfix;
+}
+
+
+.fs-footer-networks {
+	float: right;
+	margin-right: 3%;
+}
+
+.fs-networks-list {
+	@extend %clearfix;
+}
+
+.fs-networks-itens {
+	float: left;
+	margin-left: 10px;
+}
+
+// newsletter
+.fs-footer-news {
+	float: left;
+	margin-left: 3%;
+	width: 50%;
+}
+
+.fs-footer-news form input[type="text"] {   
+	padding: 10px;
+	margin: 0px;
+	float: left;
+	border: none;
+	width: 40%;
+	background: #2e2e2e;
+	color: $text-gray;
+	font-size: fontSize(12);
+	font-style: italic;
+	height: 35px;
+	box-sizing: border-box;
+}
+
+.fs-footer-news form input[type="submit"] {   
+	cursor: pointer;
+    right: 0px;
+    background: #3D3D3D url("../images/icons.png") no-repeat scroll -2px -42px;
+    padding: 10px;
+    width: 36px;
+    height: 35px;
+    border: medium none;
+    outline: medium none;
+    transition: all 0.3s ease-in-out 0s;
+    text-indent: -330px;
+
+    &:hover {
+    	opacity: 0.7;
+	 	transition: opacity 0.15s ease-in-out 0s;
+    }
+}
+
+
+// networks
+.fs-networks-itens {
+
+	a{
+		overflow: hidden;
+		background: url("../images/icons.png")no-repeat;
+		width: 36px;
+		height: 36px;
+		text-indent: -300px;
+		display: block;
+		
+		&:hover {
+		   opacity: 0.7;
+	 	   transition: opacity 0.15s ease-in-out 0s;
+		}	
+	}
+}
+
+.icon-facebook a{
+	background-position: 0px 0px;
+}
+
+.icon-twitter a{
+	background-position: -47px 0px;
+}
+
+.icon-gplus a{
+	background-position: -90px 0px;
+}
+
+.icon-linkedin a{
+	background-position: -135px 0px;
+}
+
+.icon-fliker a{
+	background-position: -179px 0px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////
+//////////////////secondary footer
+////////////////////////////////////////////////////////////////////////////
+.fs-secondary-footer {
+	background: #2e2e2e;
+	color: rgba(255,255,255, 0.5); 
+
+}
+
+.fs-secondary-footer-content {
+	max-width: $larg-max;
+	margin: 0 auto;
+	font-size: fontSize(12);
+
+	@extend %clearfix;
+}
+
+.fs-copyright {
+	float: left;
+	padding: 20px 0;
+}
+
+.fs-footer-nav {
+	float: right;
+}
+
+.fs-footer-nav-categories {
+	padding: 30px 0;
+	@extend %clearfix;
+
+}
+
+.fs-footer-nav-category {
+	float: left;
+	color: rgba(255,255,255, 0.5); 
+
+	&:nth-child(1n + 2):before {
+		content: "/";
+		padding: 5px;
+	
+	}
+
+	a {
+		color: rgba(255,255,255, 0.5);
+		text-decoration: none;
+	
+		&:hover {
+			color: $black-color;
+		}
+	}
+}

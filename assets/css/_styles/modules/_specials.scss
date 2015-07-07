@@ -1,0 +1,43 @@
+.fs-specials {
+	background: $black-color;
+	padding: 30px 0;
+	
+}
+
+.fs-specials-categories {
+	margin: 0 auto;
+	max-width: $larg-max;
+	@extend %clearfix;
+}
+
+.fs-specials-category {
+	width: 32%;
+	margin-left: 2%;
+	float: left;
+	position: relative;
+//	@extend %clearfix;
+	font-weight: 200;
+	font-size: fontSize(20);
+	
+	&:first-child {
+		margin-left: 0px;
+	}
+
+	a {
+		position: absolute;
+		top: 35%;
+		left: 13%;	
+		padding: 10px 30px;
+	    background: rgba(0,0,0,0.5);
+	    box-sizing: border-box;
+	    color: #fff;
+	    text-decoration: none;
+	    text-transform: uppercase;
+	    width: 78%;
+    	text-align: center;
+
+    	&:hover {
+    		opacity: 0.8;
+    	}
+	}
+}

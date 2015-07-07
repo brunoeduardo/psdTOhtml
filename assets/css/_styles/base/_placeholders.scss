@@ -1,0 +1,33 @@
+%clearfix {
+    &:after {
+        clear: both;
+        content: " ";
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+        display: block;
+    }
+}
+
+%itens-header-right {
+	padding: 20px 30px;
+	display: inline-block;
+	border-right: 1px solid #eee;
+	box-sizing: border-box;
+	float: right;
+}
+
+%filter-products{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url("../images/icons.png") no-repeat;
+    text-indent: -300px;
+    cursor: pointer;
+    margin-left: 5px;
+
+    &:hover {
+        opacity: 0.7;
+        transition: opacity 0.15s ease-in-out 0s;
+    }
+}
